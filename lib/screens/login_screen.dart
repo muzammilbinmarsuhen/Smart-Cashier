@@ -95,7 +95,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 const SizedBox(height: 10),
 
-                /// FORGOT PASSWORD BUTTON
+                /// FORGOT PASSWORD
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
@@ -133,12 +133,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
 
                 const SizedBox(height: 20),
-
-                const Text("atau", style: TextStyle(fontSize: 14)),
+                const Text("atau"),
 
                 const SizedBox(height: 20),
 
-                /// GOOGLE LOGIN BUTTON
+                /// GOOGLE LOGIN
                 SizedBox(
                   width: double.infinity,
                   height: 48,
@@ -156,9 +155,29 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     style: OutlinedButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
                     ),
                   ),
+                ),
+
+                const SizedBox(height: 20),
+
+                /// REGISTER LINK
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text("Belum punya akun?"),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/register');
+                      },
+                      child: const Text(
+                        "Daftar",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

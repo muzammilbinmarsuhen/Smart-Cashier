@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screens/login_screen.dart';
-// import 'screens/register_screen.dart';
+import 'screens/register_screen.dart';
+import 'screens/forgot_password_screen.dart';
 // import 'screens/home_screen.dart';
 
 void main() {
@@ -25,7 +26,8 @@ class SmartCashierApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const LoginScreen(),
-        // '/register': (context) => const RegisterScreen(),
+        '/register': (context) => const RegisterScreen(),
+        '/forgot-password': (context) => const ForgotPasswordScreen(),
         // '/home': (context) => const HomeScreen(),
       },
     );
